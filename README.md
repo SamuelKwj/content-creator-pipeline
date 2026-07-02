@@ -192,8 +192,7 @@ cp -r content-creator-pipeline/ ~/.hermes/skills/creative/
 
 ### cheat-on-content 体系（16 个技能）
 
-- **来源：** 原创内容创作工作流，由 Hermes Agent 在创作者的实际使用中逐步沉淀形成
-- **许可：** MIT（与本包一致）
+- **来源：** [原地址和原作者在此](https://github.com/XBuilderLAB/cheat-on-content)
 - **说明：** 这 16 个 cheat-* 技能构成本包的核心流程。每个技能的快照独立存放于 `skill/cheat-*/SKILL.md`。修改请直接改对应文件。
 
 ### humanizer（去 AI 味）
