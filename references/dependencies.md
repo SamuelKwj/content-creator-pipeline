@@ -188,6 +188,15 @@
 | 本包路径 | `skill/dbs-hook/SKILL.md` |
 | 触发词 | "优化开头" / "帮我改开头" |
 
+### 19. douyin-hashtag-advisor — 抖音发布前话题推荐
+
+| 项目 | 值 |
+|------|-----|
+| 作用 | 分析标题/脚本/账号定位 → 生成抖音发布话题包 |
+| 上游来源 | Hermes built-in: content-creator/douyin-hashtag-advisor |
+| 本包路径 | `skill/douyin-hashtag-advisor/SKILL.md` |
+| 触发词 | "配话题" / "发布前话题包" / "帮我想话题" |
+
 ---
 
 ## ⚙️ 安装指引

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-18-blue?style=flat-square" alt="18 skills">
+  <img src="https://img.shields.io/badge/skills-19-blue?style=flat-square" alt="19 skills">
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT">
   <img src="https://img.shields.io/badge/平台-无关-purple?style=flat-square" alt="平台无关">
   <img src="https://img.shields.io/badge/语言-中文-red?style=flat-square" alt="中文">
@@ -9,7 +9,7 @@
 <h3 align="center">内容创作者工作流整合包</h3>
 
 <p align="center">
-  <b>18 个技能。一个文件夹。零平台锁定。</b><br>
+  <b>19 个技能。一个文件夹。零平台锁定。</b><br>
   让你的 AI Agent 从灵感捕获到校准发布，全流程自动化。
 </p>
 
@@ -124,6 +124,7 @@ cp -r content-creator-pipeline/ ~/.hermes/skills/creative/
 | 「升级 rubric」 | `cheat-bump` | 校准池重打分 → 进化评分维度 |
 | 「优化开头」 | `dbs-hook` | 诊断开头问题 → 生成优化方案 |
 | 「去 AI 味」 | `humanizer` | 剥离 AI 写作痕迹 |
+| 「配话题」「发布前话题」 | `douyin-hashtag-advisor` | 分析标题/脚本 → 生成抖音话题包 |
 
 ### 铁律（不可违反）
 
@@ -175,12 +176,13 @@ cp -r content-creator-pipeline/ ~/.hermes/skills/creative/
 | 15 | `cheat-migrate` | 📋 初始化 | 升级 .cheat-state.json schema |
 | 16 | `cheat-init` | 📋 初始化 | 首次项目脚手架搭建 |
 
-### 辅助工具（2 个）
+### 辅助工具（3 个）
 
 | # | 技能 | 做什么 | 来源 |
 |---|------|--------|------|
 | 17 | `humanizer` | 去 AI 味，恢复真人语气 | [blader/humanizer](https://github.com/blader/humanizer) |
 | 18 | `dbs-hook` | 短视频开头诊断与优化 | dontbesilent 商业工具箱 |
+| 19 | `douyin-hashtag-advisor` | 抖音发布前话题推荐 | Hermes 内置 skill |
 
 <br>
 
@@ -208,6 +210,14 @@ cp -r content-creator-pipeline/ ~/.hermes/skills/creative/
 - **来源：** dontbesilent 商业工具箱
 - **许可：** dontbesilent 体系内部工具。本包以快照形式包含该技能用于工作流完整性。如果你是该技能的原始作者且不希望它被包含在此整合包中，请提交 issue 或 PR，我们会立即移除。
 - **本包路径：** `skill/dbs-hook/SKILL.md`
+
+### douyin-hashtag-advisor（抖音话题推荐）
+
+- **来源：** Hermes 内置 skill: content-creator/douyin-hashtag-advisor
+- **作者：** KK + Hermes
+- **许可：** MIT
+- **本包路径：** `skill/douyin-hashtag-advisor/SKILL.md`
+- **说明：** 分析标题/脚本/账号定位，生成抖音发布前话题推荐包。包含来源可信度标记、风险标记、重复控制、可直接复制的发布版本。
 
 ### 总许可
 

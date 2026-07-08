@@ -5,7 +5,7 @@ description: |
   完整闭环：火花→深挖写稿→盲打分→预测→拍摄→发布→复盘→校准升级。
   启动时自动加载所有依赖 skill，新 AI 读此文件即知完整流程 + 所有子 skill 依赖。
   依赖清单见 references/dependencies.md。
-version: 1.6.0
+version: 1.7.0
 author: Hermes Agent (整合包维护者)
 license: MIT
 metadata:
@@ -29,6 +29,7 @@ metadata:
       - cheat-init
       - humanizer
       - dbs-hook
+      - douyin-hashtag-advisor
       - hermes-agent-skill-authoring
 ---
 
@@ -64,12 +65,13 @@ metadata:
 | `cheat-migrate` | cheat-on-content | 同上 | schema 迁移 |
 | `cheat-init` | cheat-on-content | 同上 | 首次初始化 |
 
-### 外部独立项目（2 个 — 辅助）
+### 外部独立项目（3 个 — 辅助）
 
 | 子 skill | 上游来源 | 许可证 | 说明 |
 |----------|---------|--------|------|
 | `humanizer` | [github.com/blader/humanizer](https://github.com/blader/humanizer) | MIT | 去 AI 味 |
 | `dbs-hook` | Hermes built-in: creative/dbs-hook | MIT | 短视频开头优化 |
+| `douyin-hashtag-advisor` | Hermes built-in: content-creator/douyin-hashtag-advisor | MIT | 抖音发布前话题推荐 |
 
 ### 已声明但非子 skill（1 个）
 
@@ -195,7 +197,8 @@ metadata:
 | cheat-learn-from | 导入对标账号 | 想找 benchmark 时 |
 | cheat-migrate | 升级 state schema | cheat-on-content 更新时 |
 | humanizer | 去 AI 味 | cheat-seed 写 draft 后自动调 |
-| dbs-hook | 短视频开头优化 | 优化钩子时 |
+| `dbs-hook` | 短视频开头优化 | 优化钩子时 |
+| `douyin-hashtag-advisor` | 抖音发布前话题推荐 | 发布前配话题时 |
 
 ---
 
@@ -267,6 +270,7 @@ metadata:
 | "学这个账号" | cheat-learn-from | 导入对标账号 |
 | 金句卡轮播视频 | 见 references/video-card-slideshow.md | 卡片+配音+字幕合成 |
 | 优化开头 | dbs-hook | 优化前 3 秒钩子 |
+| 发布前话题推荐 | douyin-hashtag-advisor | 抖音发布前话题包 |
 | "迁移" | cheat-migrate | 升级 state schema |
 | "做成思维导图"/"画个流程图"/"可视化工作流" | 见 references/workflow-visualization.md | 双轨产出：excalidraw 编辑底稿 + baoyu-infographic 成品图 |
 | "收藏好文" / "分析好文" / "归档好文" / "提炼一下" | 好文收藏分析（内置本 pipeline） | 提炼核心观点+金句+结构分析 → 归档到好文收藏库 |
@@ -443,6 +447,7 @@ metadata:
 | 看当前状态 | cheat-status |
 | 金句卡轮播视频 | references/video-card-slideshow.md（Playwright + ffmpeg 合成） |
 | 优化开头 | dbs-hook |
+| 发布前话题推荐 | douyin-hashtag-advisor |
 | 去 AI 味 | humanizer |
 | 做脚本骨架 | cheat-seed（只给大纲模式） |
 
